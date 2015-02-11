@@ -1,0 +1,5 @@
+1.- make a virtualenv
+2.- install requirements pip install -r requirements.txt
+3.- run: python runserver.py run
+4.- Go to 0.0.0.0:5000 <development mode>
+

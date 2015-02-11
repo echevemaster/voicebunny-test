@@ -1,0 +1,14 @@
+{% macro render_field(field) %}
+    <div class="form-group" {% if field.errors %}has-error{% endif %} {{ kwargs.pop('class_', '') }}>
+     <label for="{{ field.id }}" class="control-label">{{ field.label }}</label>
+ {{ field(class_='form-control',  **kwargs)|safe }}
+  {% if field.errors %}
+
+    {% for error in field.errors %}
+     <small class="help-block">{{ error }}</small>
+    {% endfor %}
+
+
+</div>
+  {% endif %}
+{% endmacro %}

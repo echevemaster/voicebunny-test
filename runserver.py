@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from flask.ext import script
+from voicebunny.app import app
+manager = script.Manager(app)
+
+
+@manager.command
+def run():
+    """ Run application """
+    app.run(debug=True, host='0.0.0.0')
+
+if __name__ == '__main__':
+    manager.run()

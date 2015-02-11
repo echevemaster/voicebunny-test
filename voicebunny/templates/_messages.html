@@ -1,0 +1,14 @@
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    <div class="alert alert-success">
+        <ul class="list-unstyled">
+            {% for message in messages %}
+                <li>
+                <span class="glyphicon glyphicon-ok"></span>
+                <strong>{{ message }}</strong>
+                </li>
+            {% endfor %}
+      </ul>
+    </div>
+{% endif %}
+{% endwith %}
